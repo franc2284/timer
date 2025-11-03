@@ -50,3 +50,28 @@ body{
     height: 32px;
     display: block;
 }
+
+.knopka__nazvanie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: 48px;
+    margin-right: 31.5px;
+}
+
+.nazvanie {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    color: #3C3C3C;
+}
+
+.peresapusk{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FF0000A3
+}
