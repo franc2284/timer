@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Таймер</title>
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,13 +15,13 @@
     <div class="small_container">
         <div class="timer__budilnik__knopki">
             <div class="timer">
-                <a href="" aria-label="Открыть таймер">
-                    <img src="images/Group2981.svg">
+                <a href="#" aria-label="Открыть таймер">
+                    <img src="images/Group2981.svg" alt="" aria-hidden="true">
                 </a>
             </div>
             <div class="budilnik">
-                <a href="" aria-label="Открыть будильник">
-                    <img src="images/Group2982.svg">
+                <a href="#" aria-label="Открыть будильник">
+                    <img src="images/Group2982.svg" alt="" aria-hidden="true">
                 </a>
             </div>
         </div> 
@@ -30,7 +31,13 @@
     <div class="big_container">
         <div class="knopka__nazvanie">
             <h2 class="nazvanie">Таймер</h2>
-            <button class="peresapusk">перезапустить</button>
+            <button class="peresapusk" type="button">перезапустить</button>
+        </div>
+
+        <div class="time__centr">
+            <h2 class="time__text">Введите время:</h2>
+            <input class="time__input" type="text" id="timeInput" placeholder="mm:ss" pattern="^([0-5][0-9]):([0-5][0-9])$" maxlength="5"/>
+            <button class="time__button" type="button">Старт</button>
         </div>
     </div>
   </div>
