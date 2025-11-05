@@ -40,3 +40,14 @@ body{
     background: #FFFFFF;
     box-shadow: 0px 4px 24px 0px #21212142;
 }
+
+.timer__budilnik__knopki {
+    display: flex;
+    gap: 13px;
+}
+
+.timer, .budilnik {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
