@@ -9,6 +9,7 @@ const pauseBtn   = document.querySelector('.btn__pausa');
 const pauseImg   = pauseBtn ? pauseBtn.querySelector('img') : null;
 const stopBtn    = document.querySelector('.btn__stop');
 const plusMinuteBtn = document.querySelector('.btn__minute');
+const restartBtn = document.querySelector('.peresapusk');
 
 const PAUSE_ICON_SRC = 'images/ph_pause-fill.svg';
 const PLAY_ICON_SRC  = 'images/Vector1.svg';
@@ -119,7 +120,6 @@ if (startBtn && setupBlock && timerBlock && linia && timerText && progressCircle
     const seconds = parseTime(value);
     if (seconds === null || seconds <= 0) return;
 
-    
     stopTimer();
 
     totalSeconds = seconds;
@@ -139,10 +139,8 @@ if (pauseBtn) {
     if (totalSeconds <= 0) return;
 
     if (isRunning) {
-      
       stopTimer();
     } else {
-      
       startTimer();
     }
   });
@@ -154,15 +152,25 @@ if (stopBtn) {
   });
 }
 
-
 if (plusMinuteBtn) {
   plusMinuteBtn.addEventListener('click', () => {
-    
     if (totalSeconds <= 0) return;
 
     totalSeconds     += 60;
     remainingSeconds += 60;
 
     updateView();
+  });
+}
+
+if (restartBtn) {
+  restartBtn.addEventListener('click', () => {
+    if (totalSeconds <= 0) return;
+
+    stopTimer();
+    remainingSeconds = totalSeconds;
+    progressCircle.style.strokeDashoffset = 0;
+    updateView();
+    startTimer();
   });
 }
