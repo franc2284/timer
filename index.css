@@ -78,12 +78,19 @@ body{
 }
 
 .time__centr {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     gap: 24px;
+}
+
+.timer-circle {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .time__text {
@@ -130,6 +137,10 @@ body{
     height: 0px;
     border-width: 1px;
     border: 1px solid #ECE7E7
+}
+
+.linia.no-margin {
+    margin-top: 25px;
 }
 
 .btn__down {
@@ -180,4 +191,8 @@ body{
     font-size: 14px;
     text-align: center;
     color: #3C3C3C;
+}
+
+.hidden {
+    display: none;
 }

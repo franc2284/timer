@@ -34,10 +34,20 @@
             <button class="peresapusk" type="button">перезапустить</button>
         </div>
 
-        <div class="time__centr">
+        <div class="time__centr" id="setupBlock">
             <h2 class="time__text">Введите время:</h2>
             <input class="time__input" type="text" id="timeInput" placeholder="mm:ss" pattern="^([0-5][0-9]):([0-5][0-9])$" maxlength="5"/>
             <button class="time__button" type="button">Старт</button>
+        </div>
+
+        <div class="timer-circle hidden" id="timerBlock">
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle r="90" cx="100" cy="100" fill="transparent" stroke="#ece7e7" stroke-width="15"></circle>
+                <circle r="90" cx="100" cy="100" stroke="#cd59cf" stroke-width="15" stroke-linecap="round"
+                stroke-dashoffset="113" stroke-dasharray="565.48" fill="transparent" transform="rotate(-90 100 100)"></circle>
+                <text id="timerText" x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="#3c3c3c" font-size="30"
+                font-weight="800">80</text>
+            </svg>
         </div>
 
         <hr class="linia">
