@@ -7,6 +7,7 @@ const progressCircle = document.querySelector('#timerBlock circle:nth-of-type(2)
 
 const pauseBtn   = document.querySelector('.btn__pausa');
 const pauseImg   = pauseBtn ? pauseBtn.querySelector('img') : null;
+const stopBtn    = document.querySelector('.btn__stop');
 
 const PAUSE_ICON_SRC = 'images/ph_pause-fill.svg';
 const PLAY_ICON_SRC  = 'images/Vector1.svg';
@@ -23,6 +24,7 @@ let totalSeconds = 0;
 let remainingSeconds = 0;
 let timerId = null;
 let isRunning = false;
+
 
 function parseTime(value) {
   const match = value.match(/^(\d{1,2}):([0-5]\d)$/);
@@ -64,6 +66,38 @@ function stopTimer() {
   setPauseIcon(false);
 }
 
+function resetTimer() {
+  
+  stopTimer();
+
+  
+  totalSeconds = 0;
+  remainingSeconds = 0;
+
+  
+  if (progressCircle) {
+    progressCircle.style.strokeDashoffset = 0;
+  }
+
+  
+  if (timerText) {
+    timerText.textContent = '00:00';
+  }
+
+  
+  if (timerBlock) timerBlock.classList.add('hidden');
+  if (setupBlock) setupBlock.classList.remove('hidden');
+
+  
+  if (linia) linia.classList.remove('no-margin');
+
+  
+  if (pauseImg) {
+    pauseImg.src = PAUSE_ICON_SRC;
+  }
+}
+
+
 function startTimer() {
   if (isRunning || totalSeconds <= 0 || remainingSeconds <= 0) return;
 
@@ -93,10 +127,13 @@ if (startBtn && setupBlock && timerBlock && linia && timerText && progressCircle
     const seconds = parseTime(value);
     if (seconds === null || seconds <= 0) return;
 
+    
     stopTimer();
+
     totalSeconds = seconds;
     remainingSeconds = seconds;
 
+    
     setupBlock.classList.add('hidden');
     timerBlock.classList.remove('hidden');
     linia.classList.add('no-margin');
@@ -106,14 +143,23 @@ if (startBtn && setupBlock && timerBlock && linia && timerText && progressCircle
   });
 }
 
+
 if (pauseBtn) {
   pauseBtn.addEventListener('click', () => {
     if (totalSeconds <= 0) return;
 
     if (isRunning) {
+      
       stopTimer();
     } else {
+      
       startTimer();
     }
+  });
+}
+
+if (stopBtn) {
+  stopBtn.addEventListener('click', () => {
+    resetTimer();
   });
 }
