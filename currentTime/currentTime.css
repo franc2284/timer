@@ -58,12 +58,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 78px;
 }
 
 .time__text {
     margin: 0;
     font-weight: 700;
     font-size: 20px;
+    color: #3C3C3C;
+}
+
+.vrema {
+    font-weight: 500;
+    font-size: 64px;
+    text-align: center;
+    margin: 0;
     color: #3C3C3C;
 }
