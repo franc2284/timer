@@ -75,3 +75,30 @@ body{
     margin: 0;
     color: #3C3C3C;
 }
+
+.linia {
+    margin: 58px 48px 0;
+    width: 369px;
+    height: 0px;
+    border-width: 1px;
+    border: 1px solid #ECE7E7
+}
+
+.data {
+    margin-top: 32px;
+    margin-left: 101px;
+    width: 264px;
+    height: 25px;
+    border-radius: 4px;
+    background: #ECE7E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data p {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #3C3C3C;
+}
