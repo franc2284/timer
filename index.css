@@ -123,3 +123,61 @@ body{
     font-size: 16px;
     color: #FF0000A3;
 }
+
+.linia {
+    margin: 58px 48px 0;
+    width: 369px;
+    height: 0px;
+    border-width: 1px;
+    border: 1px solid #ECE7E7
+}
+
+.btn__down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-left: 48px;
+    margin-right: 28.5px;
+}
+
+.btn__pausa__stop {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+}
+
+.btn__minuta__block{
+    display: flex;
+    margin: 0;
+}
+
+.btn img {
+  display: block;
+}
+
+
+.btn {
+    border: 0;
+    background: #ECE7E7;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn__pausa, 
+.btn__stop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.btn__minute {
+    width: 84px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #3C3C3C;
+}
